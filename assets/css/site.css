@@ -30,11 +30,16 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+a:hover,
+a:focus {
+  text-decoration: none;
+  background-color: rgba(255, 229, 143, 0.28);
+  color: #3f2302;
+  border-radius: 4px;
+  outline: none;
 }
 
 .page {
@@ -80,7 +85,7 @@ a:hover {
   padding: clamp(14px, 2vw, 34px);
 }
 
-.hero-mark {
+.hero-brand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,48 +112,81 @@ a:hover {
   display: block;
 }
 
-.hero-wordmark {
-  justify-self: center;
-  width: min(100%, 860px);
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  gap: 0.35rem;
 }
 
-.wordmark {
-  display: block;
-  width: min(100%, 760px);
-  margin: 0 auto;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6));
+.hero-name,
+.hero-tagline {
+  margin: 0;
 }
 
-.curve {
-  display: block;
-  width: min(100%, 340px);
-  margin: -10px auto 0;
-  opacity: 0.95;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+.hero-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 4vw, 4.4rem);
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  color: #f8e1a3;
+  text-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
+}
+
+.hero-tagline {
+  font-family: 'Lora', serif;
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+  font-weight: 600;
+  color: #f7e4b4;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+}
+
+.hero-divider {
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f8e1a3, transparent);
+  margin-top: 0.45rem;
 }
 
 .contact {
   position: relative;
-  padding: 2rem 3rem 1.6rem;
-  background: linear-gradient(135deg, #fdf7e7 0%, #e8d9b6 50%, #d4c198 100%);
+  padding: 2rem 2.4rem 1.8rem;
+  background: #130d08;
 }
 
-.contact::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 27px;
-  border: 2px solid rgba(170, 120, 39, 0.85);
-  pointer-events: none;
+.contact-sheet {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #7b5a1d;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #f9efe1 0%, #e2d0ac 43%, #d7c295 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 248, 222, 0.45),
+    inset 0 10px 40px rgba(255, 241, 205, 0.22);
+}
+
+.contact-panel {
+  position: relative;
+  padding: 1.4rem 1.6rem 1.8rem;
+}
+
+.contact-header {
+  height: 18px;
+  margin: 0 0 0.85rem;
+  border-top: 2px solid rgba(170, 120, 39, 0.85);
+  border-bottom: 2px solid rgba(170, 120, 39, 0.85);
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.25), transparent 40%, rgba(212, 175, 55, 0.25));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .ornate-corner {
   position: absolute;
-  width: 80px;
-  height: 80px;
-  opacity: 0.7;
+  width: 76px;
+  height: 76px;
+  opacity: 0.75;
   pointer-events: none;
 }
 
@@ -180,12 +218,21 @@ a:hover {
   z-index: 1;
   max-width: 1080px;
   margin: 0 auto;
-  padding-left: clamp(0px, 1vw, 48px);
+  padding: 1.6rem 2rem 1.8rem;
 }
 
 .detail-row {
   display: grid;
-  grid-template-columns: 48px 150px 24px 1fr;
+  grid-template-columns: 48px minmax(180px, 250px) minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(170, 119, 28, 0.22);
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 48px minmax(180px, 250px) minmax(0, 1fr);
   gap: 14px;
   align-items: center;
   padding: 0.75rem 0;
@@ -279,6 +326,10 @@ a:hover {
 
   .contact {
     padding-block: 1.35rem 1rem;
+  }
+
+  .contact-sheet {
+    border-radius: 20px;
   }
 
   .ornate-corner {
