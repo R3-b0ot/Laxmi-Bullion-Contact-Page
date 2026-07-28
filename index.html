@@ -182,6 +182,7 @@
                     </div>
                 </div>
 
+                <!-- 2 & 3. Phone + Mobile -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                     <!-- 2. Phone -->
@@ -189,17 +190,35 @@
                         <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
                             <i class="fa-solid fa-phone-volume text-sm" aria-hidden="true"></i>
                         </div>
-                        <div>
+                        <div class="flex-grow">
                             <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Direct Telephone</span>
-                            <div class="flex flex-wrap gap-2 mt-1.5 font-semibold text-sm text-gray-900">
-                                <a href="tel:02249779995" aria-label="Call 022-49779995" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded bg-amber-50 px-2 py-0.5 border border-amber-200">022-49779995</a>
-                                <a href="tel:61835427" aria-label="Call 61835427" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded bg-amber-50 px-2 py-0.5 border border-amber-200">61835427</a>
-                                <a href="tel:61835037" aria-label="Call 61835037" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded bg-amber-50 px-2 py-0.5 border border-amber-200">61835037</a>
+                            <div class="flex flex-col gap-1 mt-2 text-sm text-gray-900 font-semibold">
+                                <a href="tel:+912249779995" aria-label="Call 022 4977 9995" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded py-0.5">022 4977 9995</a>
+                                <a href="tel:+912261835427" aria-label="Call 022 6183 5427" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded py-0.5">022 6183 5427</a>
+                                <a href="tel:+912261835037" aria-label="Call 022 6183 5037" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded py-0.5">022 6183 5037</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3. Intercom -->
+                    <!-- 3. Mobile -->
+                    <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
+                            <i class="fa-solid fa-mobile-screen text-sm" aria-hidden="true"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Mobile Hotline</span>
+                            <div class="flex flex-col gap-1 mt-2 text-sm text-gray-900 font-semibold">
+                                <a href="tel:+918686799995" aria-label="Call 8686 799 995" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded py-0.5">8686 799 995</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4 & 5. Intercom + Delivery Intercom -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <!-- 4. Intercom -->
                     <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
                             <i class="fa-solid fa-headset text-sm" aria-hidden="true"></i>
@@ -214,7 +233,7 @@
                         </div>
                     </div>
 
-                    <!-- 4. Delivery Intercom -->
+                    <!-- 5. Delivery Intercom -->
                     <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
                             <i class="fa-solid fa-truck-fast text-sm" aria-hidden="true"></i>
@@ -224,19 +243,6 @@
                             <div class="flex flex-wrap gap-2 mt-1.5 font-semibold text-sm text-gray-900">
                                 <span class="bg-amber-50 text-amber-950 px-2 py-0.5 rounded border border-amber-200">8787</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. Mobile -->
-                    <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
-                        <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
-                            <i class="fa-solid fa-mobile-screen text-sm" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Mobile Hotline</span>
-                            <p class="font-bold text-gray-900 text-base mt-1">
-                                <a href="tel:8686799995" aria-label="Call mobile 8686799995" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded">8686799995</a>
-                            </p>
                         </div>
                     </div>
 
@@ -302,8 +308,8 @@
                 <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
 
-            <div class="w-16 h-16 bg-gradient-to-br from-[#D4AF37] to-[#8C6D31] rounded-2xl mx-auto flex items-center justify-center shadow-lg mb-3 p-2">
-                <img src="assets/logo/laxmi-bullion-logo-mark.svg" alt="Laxmi Bullion" class="w-full h-auto">
+            <div class="mb-3">
+                <img src="assets/logo/laxmi-bullion-logo-mark.svg" alt="Laxmi Bullion" class="w-16 h-auto mx-auto">
             </div>
 
             <h3 class="font-cinzel text-xl font-bold text-[#FBF5B7]">Shubhlaxmi Jewellers App</h3>
