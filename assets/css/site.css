@@ -271,6 +271,10 @@ a {
   border-bottom: none;
 }
 
+.detail-row[hidden] {
+  display: none;
+}
+
 .icon-circle {
   width: 32px;
   height: 32px;
