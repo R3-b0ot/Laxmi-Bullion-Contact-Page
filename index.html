@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laxmi Bullion - Gold Bullion Merchant</title>
-    <meta name="description" content="Laxmi Bullion contact page." />
-    <meta name="theme-color" content="#0a0806" />
+    <meta name="description" content="Laxmi Bullion, Zaveri Bazaar, Mumbai. Gold bullion merchant since generations." />
+    <meta name="theme-color" content="#1a0f08" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -14,32 +14,48 @@
     <script src="assets/js/site.js" defer></script>
 </head>
 <body>
-    <main class="page">
-        <section class="card" aria-label="Laxmi Bullion contact card">
 
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <main class="page">
+        <article class="card" aria-label="Laxmi Bullion contact card">
+
+            <!-- ── Vintage frame corners ── -->
+            <i class="frame-corner frame-tl" aria-hidden="true"></i>
+            <i class="frame-corner frame-tr" aria-hidden="true"></i>
+            <i class="frame-corner frame-bl" aria-hidden="true"></i>
+            <i class="frame-corner frame-br" aria-hidden="true"></i>
+
+            <!-- ── Brand header ── -->
             <header class="brand">
-                <div class="brand-mark">
-                    <img src="assets/logo/laxmi-bullion-logo-mark.svg" alt="Laxmi Bullion emblem" width="43" height="64">
+                <div class="brand-emblem">
+                    <img src="assets/logo/laxmi-bullion-logo-mark.svg" alt="" width="43" height="64" aria-hidden="true">
                 </div>
                 <h1 class="brand-name">Laxmi Bullion</h1>
-                <div class="brand-divider">
-                    <img src="assets/logo/laxmi-bullion-logo-curve.svg" alt="" aria-hidden="true" class="curve-svg">
+                <div class="brand-curve">
+                    <img src="assets/logo/laxmi-bullion-logo-curve.svg" alt="" aria-hidden="true">
                 </div>
-                <p class="brand-tagline">Gold Bullion Merchant</p>
+                <p class="brand-tagline">Gold Bullion Merchant &middot; Zaveri Bazaar, Mumbai</p>
             </header>
 
-            <div class="divider"></div>
+            <!-- ── Ornamental divider ── -->
+            <div class="ornament" aria-hidden="true">
+                <span class="ornament-line"></span>
+                <span class="ornament-diamond"></span>
+                <span class="ornament-line"></span>
+            </div>
 
-            <section class="contact">
+            <!-- ── Contact details ── -->
+            <section class="contact" aria-label="Contact details">
                 <div class="contact-grid">
 
-                    <div class="contact-item contact-item--wide">
+                    <div class="contact-item contact-item--full">
                         <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="contact-body">
                             <span class="contact-label">Address</span>
                             <span class="contact-value">
                                 227/G, 1st Floor, Off. No. 16, Zaveri Bazaar,
-                                Narnarayan Mandir, Kalbadevi Road, Mumbai - 400 002
+                                Narnarayan Mandir, Kalbadevi Road, Mumbai &ndash; 400 002
                             </span>
                         </div>
                     </div>
@@ -115,7 +131,7 @@
                     </div>
 
                     <div class="contact-item" id="download-fallback" hidden>
-                        <div class="contact-icon"><i class="fa-solid fa-info"></i></div>
+                        <div class="contact-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="contact-body">
                             <span class="contact-label">Download</span>
                             <span class="contact-value">
@@ -127,7 +143,8 @@
                 </div>
             </section>
 
-        </section>
+        </article>
     </main>
+
 </body>
 </html>
