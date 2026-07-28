@@ -362,7 +362,7 @@ a {
   }
 
   .hero {
-    aspect-ratio: 3 / 1.35;
+    aspect-ratio: 16 / 9;
   }
 
   .contact {
@@ -407,7 +407,11 @@ a {
 
 @media (max-width: 560px) {
   .hero {
-    aspect-ratio: 3 / 1.55;
+    aspect-ratio: 2 / 1;
+  }
+
+  .hero-bg {
+    object-position: center 40%;
   }
 
   .hero-copy {
@@ -438,5 +442,9 @@ a {
 
   .details {
     padding: 1.4rem 1.1rem 1.4rem;
+  }
+
+  .contact {
+    padding: 1.2rem 1rem 1rem;
   }
 }
