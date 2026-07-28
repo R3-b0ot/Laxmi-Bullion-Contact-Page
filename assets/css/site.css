@@ -27,8 +27,17 @@ body {
     linear-gradient(180deg, #100c08 0%, #070605 100%);
 }
 
+body,
+button,
+input,
+select,
+textarea,
 a {
-  color: inherit;
+  font-family: "Lora", Georgia, serif;
+}
+
+a {
+  color: #4a2f0c;
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -40,6 +49,14 @@ a:focus {
   color: #3f2302;
   border-radius: 4px;
   outline: none;
+}
+
+button,
+input,
+select,
+textarea,
+a {
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .page {
@@ -83,6 +100,23 @@ a:focus {
   align-items: center;
   gap: clamp(12px, 1.6vw, 28px);
   padding: clamp(14px, 2vw, 34px);
+}
+
+.hero-copy {
+  background: rgba(7, 6, 4, 0.72);
+  padding: 1.1rem 1.45rem;
+  border-radius: 24px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  min-width: 0;
+}
+
+.hero-name {
+  color: #f9e3a8;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+}
+
+.hero-tagline {
+  color: #f1ddaf;
 }
 
 .hero-brand {
@@ -170,16 +204,16 @@ a:focus {
 
 .contact-panel {
   position: relative;
-  padding: 1.4rem 1.6rem 1.8rem;
+  padding: 1.6rem 2rem 2rem;
 }
 
 .contact-header {
   height: 18px;
-  margin: 0 0 0.85rem;
+  margin: 0 0 1rem;
   border-top: 2px solid rgba(170, 120, 39, 0.85);
   border-bottom: 2px solid rgba(170, 120, 39, 0.85);
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.25), transparent 40%, rgba(212, 175, 55, 0.25));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.28), transparent 40%, rgba(212, 175, 55, 0.28));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
 }
 
 .ornate-corner {
@@ -218,25 +252,16 @@ a:focus {
   z-index: 1;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 1.6rem 2rem 1.8rem;
+  padding: 1.8rem 2.2rem 2rem;
 }
 
 .detail-row {
   display: grid;
-  grid-template-columns: 48px minmax(180px, 250px) minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: 48px minmax(180px, 260px) minmax(0, 1fr);
+  gap: 18px;
   align-items: center;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(170, 119, 28, 0.22);
-}
-
-.detail-row {
-  display: grid;
-  grid-template-columns: 48px minmax(180px, 250px) minmax(0, 1fr);
-  gap: 14px;
-  align-items: center;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(170, 119, 28, 0.2);
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(170, 119, 28, 0.25);
 }
 
 .detail-row--address {
@@ -271,13 +296,29 @@ a:focus {
   width: 100%;
   font-size: clamp(1rem, 1.45vw, 1.15rem);
   font-weight: 700;
+  color: #3e2712;
+  line-height: 1.4;
 }
 
 .detail-value {
-  font-size: clamp(0.98rem, 1.3vw, 1.08rem);
+  font-size: clamp(1rem, 1.3vw, 1.08rem);
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.75;
   word-break: break-word;
+  color: #2b1d12;
+}
+
+.detail-value a {
+  font-weight: 700;
+  color: #4e3015;
+}
+
+.detail-value a:hover,
+.detail-value a:focus-visible {
+  background-color: rgba(255, 229, 143, 0.35);
+  color: #3f2302;
+  border-radius: 4px;
+  outline: none;
 }
 
 .detail-value a {
@@ -332,9 +373,15 @@ a:focus {
     border-radius: 20px;
   }
 
-  .ornate-corner {
-    width: 62px;
-    height: 62px;
+  .hero-overlay {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hero-copy {
+    width: min(100%, 640px);
+    padding: 1rem 1.2rem;
   }
 
   .detail-row {
@@ -354,13 +401,25 @@ a:focus {
 
   .detail-value {
     grid-column: 2;
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
 }
 
 @media (max-width: 560px) {
   .hero {
     aspect-ratio: 3 / 1.55;
+  }
+
+  .hero-copy {
+    padding: 0.95rem 1rem;
+  }
+
+  .hero-name {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
   }
 
   .logo-plaque {
@@ -375,5 +434,9 @@ a:focus {
 
   .detail-row {
     padding: 0.68rem 0;
+  }
+
+  .details {
+    padding: 1.4rem 1.1rem 1.4rem;
   }
 }
