@@ -1,9 +1,9 @@
 (function () {
-  const playStoreUrl = "https://play.google.com/store/apps/details?id=com.chirayusoft.shubhlaxmijewellers&hl=en_IN";
-  const appStoreUrl = "https://apps.apple.com/in/app/shubhlaxmi-jewellers/id1578511201";
-  const downloadRow = document.getElementById("download-row");
-  const downloadLink = document.getElementById("download-link");
-  const fallbackRow = document.getElementById("download-fallback");
+  var playStoreUrl = "https://play.google.com/store/apps/details?id=com.chirayusoft.shubhlaxmijewellers&hl=en_IN";
+  var appStoreUrl = "https://apps.apple.com/in/app/shubhlaxmi-jewellers/id1578511201";
+  var downloadRow = document.getElementById("download-row");
+  var downloadLink = document.getElementById("download-link");
+  var fallbackRow = document.getElementById("download-fallback");
 
   if (!downloadRow || !downloadLink || !fallbackRow) {
     return;
@@ -22,59 +22,53 @@
     fallbackRow.hidden = false;
   }
 
-  // Modern detection via User-Agent Client Hints (Chromium 90+)
-  if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
-    navigator.userAgentData
-      .getHighEntropyValues(["platform", "platformVersion"])
-      .then(function (ua) {
-        var platform = (ua.platform || "").toLowerCase();
+  // Try synchronous low-entropy UA Client Hints first (Chromium 90+)
+  if (navigator.userAgentData) {
+    var isMobile = navigator.userAgentData.mobile;
+    var platform = (navigator.userAgentData.platform || "").toLowerCase();
 
-        if (platform === "android") {
-          showDownload(
-            playStoreUrl,
-            "Shubhlaxmi Jewellers \u2013 Apps on Google Play",
-            "Open Shubhlaxmi Jewellers on Google Play"
-          );
-        } else if (platform === "ios" || platform === "macos") {
-          showDownload(
-            appStoreUrl,
-            "Shubhlaxmi Jewellers App \u2013 App Store",
-            "Open Shubhlaxmi Jewellers App on the App Store"
-          );
-        } else {
-          showFallback();
-        }
-      })
-      .catch(function () {
-        detectViaUAString();
-    });
-    return;
-  }
-
-  // Fallback for Safari, Firefox, older browsers
-  function detectViaUAString() {
-    var ua = navigator.userAgent || "";
-    var isAndroid = /Android/i.test(ua);
-    var isIOS = /iPhone|iPad|iPod/i.test(ua);
-    // iPad on iPadOS 13+ reports as Mac; check maxTouchPoints
-    var isIPadOS = /Macintosh/i.test(ua) && navigator.maxTouchPoints > 1;
-
-    if (isAndroid) {
+    if (isMobile && platform === "android") {
       showDownload(
         playStoreUrl,
         "Shubhlaxmi Jewellers \u2013 Apps on Google Play",
         "Open Shubhlaxmi Jewellers on Google Play"
       );
-    } else if (isIOS || isIPadOS) {
+      return;
+    }
+
+    if (platform === "ios" || platform === "macos") {
       showDownload(
         appStoreUrl,
         "Shubhlaxmi Jewellers App \u2013 App Store",
         "Open Shubhlaxmi Jewellers App on the App Store"
       );
-    } else {
-      showFallback();
+      return;
     }
+
+    // Chromium on non-mobile/desktop — show fallback
+    showFallback();
+    return;
   }
 
-  detectViaUAString();
+  // Fallback for Safari, Firefox, older browsers
+  var ua = navigator.userAgent || "";
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua);
+  var isIPadOS = /Macintosh/i.test(ua) && navigator.maxTouchPoints > 1;
+
+  if (isAndroid) {
+    showDownload(
+      playStoreUrl,
+      "Shubhlaxmi Jewellers \u2013 Apps on Google Play",
+      "Open Shubhlaxmi Jewellers on Google Play"
+    );
+  } else if (isIOS || isIPadOS) {
+    showDownload(
+      appStoreUrl,
+      "Shubhlaxmi Jewellers App \u2013 App Store",
+      "Open Shubhlaxmi Jewellers App on the App Store"
+    );
+  } else {
+    showFallback();
+  }
 })();

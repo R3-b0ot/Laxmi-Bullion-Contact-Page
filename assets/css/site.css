@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -62,6 +63,7 @@ a {
 .page {
   width: min(1600px, calc(100vw - 12px));
   margin: 6px auto;
+  overflow-x: hidden;
 }
 
 .business-card {
@@ -85,6 +87,7 @@ a {
 .hero-bg {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
