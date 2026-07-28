@@ -150,6 +150,9 @@
                 <a href="https://wa.me/918686799995?text=Hello%20Laxmi%20Bullion%2C%20I%20would%20like%20to%20inquire%20about%20today%27s%20gold%20rates." target="_blank" rel="noopener" aria-label="Chat with Laxmi Bullion on WhatsApp" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform border border-emerald-400/40 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-[#061e14]">
                     <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> WhatsApp Trade
                 </a>
+                <button onclick="openAppModal()" aria-label="Download Laxmi Bullion mobile app" class="bg-black/50 hover:bg-black/80 text-[#FBF5B7] border border-[#D4AF37]/50 font-medium px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-2 transition-all focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#061e14]">
+                    <i class="fa-solid fa-mobile-screen-button text-[#D4AF37]" aria-hidden="true"></i> Get Mobile App
+                </button>
             </div>
         </section>
 
@@ -158,10 +161,10 @@
             
             <div class="max-w-3xl mx-auto space-y-4">
 
-                <!-- Address Tile -->
+                <!-- 1. Address -->
                 <div class="bg-white/80 rounded-2xl p-4 sm:p-5 border border-amber-900/20 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
                     <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
-                        <i class="fa-solid fa-location-dot text-lg"></i>
+                        <i class="fa-solid fa-location-dot text-lg" aria-hidden="true"></i>
                     </div>
                     <div class="flex-grow">
                         <div class="flex items-center justify-between">
@@ -179,13 +182,12 @@
                     </div>
                 </div>
 
-                <!-- Grid of Phone, Intercom & Mobile -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    
-                    <!-- Direct Phone Lines -->
+
+                    <!-- 2. Phone -->
                     <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
-                            <i class="fa-solid fa-phone-volume text-sm"></i>
+                            <i class="fa-solid fa-phone-volume text-sm" aria-hidden="true"></i>
                         </div>
                         <div>
                             <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Direct Telephone</span>
@@ -197,53 +199,67 @@
                         </div>
                     </div>
 
-                    <!-- Intercom Desk -->
+                    <!-- 3. Intercom -->
                     <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
-                            <i class="fa-solid fa-headset text-sm"></i>
+                            <i class="fa-solid fa-headset text-sm" aria-hidden="true"></i>
                         </div>
-                        <div class="w-full">
+                        <div>
                             <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Market Intercom</span>
-                            <div class="flex items-center justify-between mt-1 text-sm text-gray-900 font-semibold">
-                                <span>Main: <strong class="text-amber-950">5427 / 5037 / 3737</strong></span>
-                                <span class="bg-amber-100 text-amber-900 text-xs px-2 py-0.5 rounded font-bold">Del: 8787</span>
+                            <div class="flex flex-wrap gap-2 mt-1.5 font-semibold text-sm text-gray-900">
+                                <span class="bg-amber-50 text-amber-950 px-2 py-0.5 rounded border border-amber-200">5427</span>
+                                <span class="bg-amber-50 text-amber-950 px-2 py-0.5 rounded border border-amber-200">5037</span>
+                                <span class="bg-amber-50 text-amber-950 px-2 py-0.5 rounded border border-amber-200">3737</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Mobile & Hotline -->
-                    <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-center gap-3">
+                    <!-- 4. Delivery Intercom -->
+                    <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
-                            <i class="fa-solid fa-mobile-screen text-sm"></i>
+                            <i class="fa-solid fa-truck-fast text-sm" aria-hidden="true"></i>
                         </div>
                         <div>
-                            <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Mobile Hotline</span>
-                            <p class="font-bold text-gray-900 text-base">
-                                <a href="tel:8686799995" aria-label="Call mobile 8686799995" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded">8686799995</a>
-                            </p>
+                            <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Delivery Intercom</span>
+                            <div class="flex flex-wrap gap-2 mt-1.5 font-semibold text-sm text-gray-900">
+                                <span class="bg-amber-50 text-amber-950 px-2 py-0.5 rounded border border-amber-200">8787</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Official Email -->
-                    <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-center gap-3">
+                    <!-- 5. Mobile -->
+                    <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
-                            <i class="fa-solid fa-envelope text-sm"></i>
+                            <i class="fa-solid fa-mobile-screen text-sm" aria-hidden="true"></i>
                         </div>
-                        <div class="overflow-hidden">
-                            <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Email Address</span>
-                            <p class="font-bold text-gray-900 text-sm truncate">
-                                <a href="mailto:laxmigold91@gmail.com" aria-label="Send email to laxmigold91@gmail.com" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded">laxmigold91@gmail.com</a>
+                        <div>
+                            <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Mobile Hotline</span>
+                            <p class="font-bold text-gray-900 text-base mt-1">
+                                <a href="tel:8686799995" aria-label="Call mobile 8686799995" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded">8686799995</a>
                             </p>
                         </div>
                     </div>
 
                 </div>
 
+                <!-- 6. Email -->
+                <div class="bg-white/80 rounded-2xl p-4 border border-amber-900/20 shadow-sm flex items-start gap-3">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-amber-950 text-[#D4AF37] flex items-center justify-center flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-envelope text-lg" aria-hidden="true"></i>
+                    </div>
+                    <div class="overflow-hidden">
+                        <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Email Address</span>
+                        <p class="font-bold text-gray-900 text-sm sm:text-base mt-1">
+                            <a href="mailto:laxmigold91@gmail.com" aria-label="Send email to laxmigold91@gmail.com" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded">laxmigold91@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
                 <!-- Live Rate & App Download Dual Banner -->
                 <div id="download-banner" class="bg-gradient-to-r from-amber-950 via-emerald-950 to-amber-950 rounded-2xl p-5 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 border border-[#D4AF37]/50">
                     <div class="flex items-center gap-3">
                         <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-[#D4AF37] flex items-center justify-center flex-shrink-0 text-[#FBF5B7]">
-                            <i class="fa-solid fa-globe text-2xl"></i>
+                            <i class="fa-solid fa-globe text-2xl" aria-hidden="true"></i>
                         </div>
                         <div>
                             <span class="text-xs uppercase text-amber-300 font-bold tracking-wider">Official Live Terminal</span>
