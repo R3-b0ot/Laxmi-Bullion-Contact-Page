@@ -98,34 +98,33 @@
 </head>
 <body class="p-3 sm:p-6 md:p-10 flex flex-col items-center justify-center min-h-screen">
 
+    <!-- Skip to content link for screen readers -->
+    <a href="#contact-details" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-[#D4AF37] focus:text-amber-950 focus:px-4 focus:py-2 focus:rounded-lg focus:z-50 focus:font-bold focus:text-sm">
+        Skip to contact details
+    </a>
+
     <!-- MAIN BRAND CARD CONTAINER -->
-    <main class="w-full max-w-4xl bg-[#081710] rounded-3xl border-2 border-[#D4AF37]/50 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] overflow-hidden relative">
+    <main class="w-full max-w-4xl bg-[#081710] rounded-3xl border-2 border-[#D4AF37]/50 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] overflow-hidden relative" aria-label="Laxmi Bullion contact card">
         
         <!-- HEADER / HERO SECTION (Deep Imperial Emerald + Gold Filigree) -->
         <section class="vintage-pattern relative p-6 sm:p-10 text-center border-b-2 border-[#D4AF37]/40">
             <!-- Decorative Heritage Vintage Corners -->
-            <div class="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-[#D4AF37]/60 pointer-events-none"></div>
-            <div class="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-[#D4AF37]/60 pointer-events-none"></div>
-            <div class="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-[#D4AF37]/60 pointer-events-none"></div>
-            <div class="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-[#D4AF37]/60 pointer-events-none"></div>
+            <div class="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-[#D4AF37]/60 pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-[#D4AF37]/60 pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-[#D4AF37]/60 pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-[#D4AF37]/60 pointer-events-none" aria-hidden="true"></div>
 
             <!-- Heritage Badge -->
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#123828] border border-[#D4AF37]/50 text-[#FBF5B7] text-xs font-semibold uppercase tracking-widest mb-6 shadow-lg">
-                <i class="fa-solid fa-building-columns text-[#D4AF37]"></i>
+                <i class="fa-solid fa-building-columns text-[#D4AF37]" aria-hidden="true"></i>
                 Zaveri Bazaar, Mumbai
             </div>
 
             <!-- Main Logo Section -->
             <div class="flex flex-col items-center justify-center">
-                <!-- Emblem Frame -->
-                <div class="relative mb-4 group cursor-pointer" onclick="openAppModal()">
-                    <div class="w-24 h-28 sm:w-28 sm:h-32 bg-gradient-to-b from-[#FAF6EE] to-[#E5D7B5] rounded-t-full rounded-b-xl border-2 border-[#D4AF37] shadow-2xl flex flex-col items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                        <img src="assets/logo/laxmi-bullion-logo-mark.svg" alt="Laxmi Bullion emblem" class="w-14 sm:w-16 h-auto my-1">
-                    </div>
-                    <!-- Wax Seal Badge Overlay -->
-                    <div class="absolute -bottom-2 -right-3 bg-gradient-to-r from-[#D4AF37] to-[#AA771C] text-black w-9 h-9 rounded-full flex items-center justify-center border-2 border-white shadow-xl text-xs font-black">
-                        <i class="fa-solid fa-shield-halved text-amber-950"></i>
-                    </div>
+                <!-- Logo Mark -->
+                <div class="mb-4">
+                    <img src="assets/logo/laxmi-bullion-logo-mark.svg" alt="Laxmi Bullion emblem" class="w-16 sm:w-20 h-auto mx-auto drop-shadow-lg">
                 </div>
 
                 <!-- Merchant Name -->
@@ -145,20 +144,17 @@
 
             <!-- Quick Action Bar -->
             <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <a href="tel:02249779995" class="gold-button-bg text-amber-950 font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-phone"></i> Call Desk
+                <a href="tel:02249779995" aria-label="Call Laxmi Bullion desk" class="gold-button-bg text-amber-950 font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#061e14]">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i> Call Desk
                 </a>
-                <a href="https://wa.me/918686799995?text=Hello%20Laxmi%20Bullion%2C%20I%20would%20like%20to%20inquire%20about%20today%27s%20gold%20rates." target="_blank" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform border border-emerald-400/40">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Trade
+                <a href="https://wa.me/918686799995?text=Hello%20Laxmi%20Bullion%2C%20I%20would%20like%20to%20inquire%20about%20today%27s%20gold%20rates." target="_blank" rel="noopener" aria-label="Chat with Laxmi Bullion on WhatsApp" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform border border-emerald-400/40 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-[#061e14]">
+                    <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> WhatsApp Trade
                 </a>
-                <button onclick="openAppModal()" class="bg-black/50 hover:bg-black/80 text-[#FBF5B7] border border-[#D4AF37]/50 font-medium px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-2 transition-all">
-                    <i class="fa-solid fa-mobile-screen-button text-[#D4AF37]"></i> Get Mobile App
-                </button>
             </div>
         </section>
 
         <!-- BODY SECTION: PARCHMENT & VINTAGE BRASS CONTACT SHEET -->
-        <section class="parchment-texture p-6 sm:p-10 relative">
+        <section id="contact-details" class="parchment-texture p-6 sm:p-10 relative" aria-label="Contact details">
             
             <div class="max-w-3xl mx-auto space-y-4">
 
@@ -170,15 +166,15 @@
                     <div class="flex-grow">
                         <div class="flex items-center justify-between">
                             <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Zaveri Bazaar Desk</span>
-                            <button onclick="copyAddress()" class="text-xs text-amber-800 hover:text-amber-950 font-semibold flex items-center gap-1 bg-amber-100 px-2 py-1 rounded">
-                                <i class="fa-regular fa-copy"></i> <span id="copy-btn-text">Copy</span>
+                            <button onclick="copyAddress()" aria-label="Copy address to clipboard" class="text-xs text-amber-800 hover:text-amber-950 font-semibold flex items-center gap-1 bg-amber-100 px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-amber-400">
+                                <i class="fa-regular fa-copy" aria-hidden="true"></i> <span id="copy-btn-text">Copy</span>
                             </button>
                         </div>
                         <p class="font-semibold text-gray-900 text-sm sm:text-base mt-1 leading-snug">
                             227/G, 1st Floor, Office No. 16, Zaver Baug, Narnarayan Mandir, Kalbadevi Road, Zaveri Bazar, Mumbai – 400002
                         </p>
-                        <a href="https://maps.google.com/?q=Kalbadevi+Road+Zaveri+Bazar+Mumbai" target="_blank" class="inline-flex items-center gap-1 text-xs font-bold text-amber-800 hover:underline mt-2">
-                            <i class="fa-solid fa-compass"></i> Open in Google Maps
+                        <a href="https://maps.google.com/?q=Kalbadevi+Road+Zaveri+Bazar+Mumbai" target="_blank" rel="noopener" aria-label="Open Laxmi Bullion location in Google Maps" class="inline-flex items-center gap-1 text-xs font-bold text-amber-800 hover:underline mt-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded">
+                            <i class="fa-solid fa-compass" aria-hidden="true"></i> Open in Google Maps
                         </a>
                     </div>
                 </div>
@@ -194,9 +190,9 @@
                         <div>
                             <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Direct Telephone</span>
                             <div class="flex flex-wrap gap-2 mt-1.5 font-semibold text-sm text-gray-900">
-                                <a href="tel:02249779995" class="hover:text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">022-49779995</a>
-                                <a href="tel:61835427" class="hover:text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">61835427</a>
-                                <a href="tel:61835037" class="hover:text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">61835037</a>
+                                <a href="tel:02249779995" aria-label="Call 022-49779995" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded bg-amber-50 px-2 py-0.5 border border-amber-200">022-49779995</a>
+                                <a href="tel:61835427" aria-label="Call 61835427" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded bg-amber-50 px-2 py-0.5 border border-amber-200">61835427</a>
+                                <a href="tel:61835037" aria-label="Call 61835037" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded bg-amber-50 px-2 py-0.5 border border-amber-200">61835037</a>
                             </div>
                         </div>
                     </div>
@@ -223,7 +219,7 @@
                         <div>
                             <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Mobile Hotline</span>
                             <p class="font-bold text-gray-900 text-base">
-                                <a href="tel:8686799995" class="hover:text-amber-700">8686799995</a>
+                                <a href="tel:8686799995" aria-label="Call mobile 8686799995" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded">8686799995</a>
                             </p>
                         </div>
                     </div>
@@ -236,7 +232,7 @@
                         <div class="overflow-hidden">
                             <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-amber-900">Email Address</span>
                             <p class="font-bold text-gray-900 text-sm truncate">
-                                <a href="mailto:laxmigold91@gmail.com" class="hover:text-amber-700">laxmigold91@gmail.com</a>
+                                <a href="mailto:laxmigold91@gmail.com" aria-label="Send email to laxmigold91@gmail.com" class="hover:text-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded">laxmigold91@gmail.com</a>
                             </p>
                         </div>
                     </div>
@@ -255,11 +251,11 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-2 w-full sm:w-auto">
-                        <a href="https://shubhlaxmijewellers.com/" target="_blank" class="flex-1 sm:flex-initial text-center bg-[#D4AF37] hover:bg-amber-400 text-amber-950 font-bold px-4 py-2 rounded-xl text-xs transition-colors">
+                        <a href="https://shubhlaxmijewellers.com/" target="_blank" rel="noopener" aria-label="Visit Shubhlaxmijewellers.com" class="flex-1 sm:flex-initial text-center bg-[#D4AF37] hover:bg-amber-400 text-amber-950 font-bold px-4 py-2 rounded-xl text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#1a0f08]">
                             Visit Website
                         </a>
-                        <button id="download-action-btn" onclick="handleDownloadAction()" class="flex-1 sm:flex-initial text-center bg-white/10 hover:bg-white/20 text-white font-bold px-4 py-2 rounded-xl text-xs border border-white/20 transition-colors flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-download text-[#D4AF37]"></i> <span id="download-action-text">App Link</span>
+                        <button id="download-action-btn" onclick="handleDownloadAction()" aria-label="Download app or view app links" class="flex-1 sm:flex-initial text-center bg-white/10 hover:bg-white/20 text-white font-bold px-4 py-2 rounded-xl text-xs border border-white/20 transition-colors flex items-center justify-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#1a0f08]">
+                            <i class="fa-solid fa-download text-[#D4AF37]" aria-hidden="true"></i> <span id="download-action-text">App Link</span>
                         </button>
                     </div>
                 </div>
@@ -271,11 +267,11 @@
         <!-- FOOTER: TRUST SEALS & TRADING HOURS -->
         <footer class="bg-[#040d09] p-6 border-t border-[#D4AF37]/30 text-center text-xs text-emerald-400/80">
             <div class="flex flex-wrap items-center justify-center gap-6 mb-3 font-medium text-amber-200/90">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-check text-[#D4AF37]"></i> BIS Hallmarked Bullion</span>
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-gem text-[#D4AF37]"></i> 999.9 Fine Gold Bars</span>
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock text-[#D4AF37]"></i> Mon - Sat: 11:00 AM - 8:00 PM</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-check text-[#D4AF37]" aria-hidden="true"></i> BIS Hallmarked Bullion</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-gem text-[#D4AF37]" aria-hidden="true"></i> 999.9 Fine Gold Bars</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock text-[#D4AF37]" aria-hidden="true"></i> Mon - Sat: 11:00 AM - 8:00 PM</span>
             </div>
-            <p class="text-gray-500 text-[11px]">
+            <p class="text-gray-400 text-[11px]">
                 Designed By Zalak Arts +91 9869048490 &bull; Zaveri Bazaar, Mumbai. All Rights Reserved.
             </p>
         </footer>
@@ -283,11 +279,11 @@
     </main>
 
     <!-- APP DOWNLOAD & QR MODAL -->
-    <div id="app-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div id="app-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Download Shubhlaxmi Jewellers app">
         <div class="bg-[#0a1f16] border-2 border-[#D4AF37] rounded-3xl p-6 sm:p-8 max-w-md w-full relative text-center text-amber-100 shadow-2xl">
             <!-- Close Button -->
-            <button onclick="closeAppModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
-                <i class="fa-solid fa-xmark"></i>
+            <button onclick="closeAppModal()" aria-label="Close dialog" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-lg p-1">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
 
             <div class="w-16 h-16 bg-gradient-to-br from-[#D4AF37] to-[#8C6D31] rounded-2xl mx-auto flex items-center justify-center shadow-lg mb-3 p-2">
@@ -305,11 +301,11 @@
             <p class="text-xs text-gray-300 mb-5">Scan this QR code with your phone camera to visit Shubhlaxmi Jewellers.</p>
 
             <div class="flex items-center justify-center gap-3">
-                <a id="modal-ios-btn" href="https://apps.apple.com/in/app/shubhlaxmi-jewellers/id1578511201" target="_blank" class="flex-1 bg-gradient-to-r from-[#D4AF37] to-[#B38728] text-amber-950 font-bold py-2.5 rounded-xl text-xs shadow hover:brightness-110 transition-all flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-apple text-sm"></i> App Store
+                <a id="modal-ios-btn" href="https://apps.apple.com/in/app/shubhlaxmi-jewellers/id1578511201" target="_blank" rel="noopener" aria-label="Download on the App Store" class="flex-1 bg-gradient-to-r from-[#D4AF37] to-[#B38728] text-amber-950 font-bold py-2.5 rounded-xl text-xs shadow hover:brightness-110 transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#0a1f16]">
+                    <i class="fa-brands fa-apple text-sm" aria-hidden="true"></i> App Store
                 </a>
-                <a id="modal-android-btn" href="https://play.google.com/store/apps/details?id=com.chirayusoft.shubhlaxmijewellers&hl=en_IN" target="_blank" class="flex-1 bg-emerald-800 text-white font-bold py-2.5 rounded-xl text-xs shadow hover:bg-emerald-700 transition-all border border-emerald-500/40 flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-google-play text-sm text-emerald-400"></i> Play Store
+                <a id="modal-android-btn" href="https://play.google.com/store/apps/details?id=com.chirayusoft.shubhlaxmijewellers&hl=en_IN" target="_blank" rel="noopener" aria-label="Get it on Google Play" class="flex-1 bg-emerald-800 text-white font-bold py-2.5 rounded-xl text-xs shadow hover:bg-emerald-700 transition-all border border-emerald-500/40 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-[#0a1f16]">
+                    <i class="fa-brands fa-google-play text-sm text-emerald-400" aria-hidden="true"></i> Play Store
                 </a>
             </div>
         </div>
